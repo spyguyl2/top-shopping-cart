@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > renders component 1`] = `
+<div>
+  <div
+    class="spinContainerOuter"
+  >
+    <label>
+      Quantity:
+    </label>
+    <div
+      class="spinContainerInner"
+    >
+      <button>
+        -
+      </button>
+      <input
+        type="number"
+      />
+      <button>
+        +
+      </button>
+    </div>
+  </div>
+  <p>
+    hi
+  </p>
+</div>
+`;
