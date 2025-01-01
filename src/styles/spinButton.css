@@ -6,10 +6,27 @@
 
 .spinContainerInner {
   display: flex;
+  height: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+button {
+  border-radius: 20px;
+}
+
+button:active {
+  background-color: rgb(62, 166, 195);
+  transform: translateY(4px);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 input {
-  margin: 0.2rem;
+  margin: 0 0.2rem;
+  border-radius: 12px;
+  text-align: center;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -22,4 +39,5 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
