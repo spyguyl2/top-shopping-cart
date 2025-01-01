@@ -1,7 +1,12 @@
 import NavBar from "./NavBar";
 
 const Shop = () => {
-  <NavBar />;
+  return (
+    <>
+      <NavBar />
+      <p>welcome to the shop</p>
+    </>
+  );
 };
 
 export default Shop;
