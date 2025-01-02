@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/navBar.css";
+import { ShoppingCart } from "lucide-react";
 
 const NavBar = () => {
   return (
@@ -14,8 +15,8 @@ const NavBar = () => {
         </li>
       </ul>
       <div className="cartButton">
-        <img src="" alt="" />
-        <p>Cart:</p>
+        <ShoppingCart size={48}></ShoppingCart>
+        <p>Checkout</p>
       </div>
     </div>
   );

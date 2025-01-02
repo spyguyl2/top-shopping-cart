@@ -3,3 +3,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.cartButton {
+  padding: 1rem;
+}

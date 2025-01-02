@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
-      <SpinButton id="test" />
+      <Home />
     </>
   );
 }
