@@ -35,6 +35,7 @@ const Shop = () => {
               spinButtonId={shopItem.id}
               image={shopItem.image}
               price={shopItem.price}
+              key={shopItem.id}
             />
           );
         })}
