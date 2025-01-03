@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
 import "../styles/Card.css";
 
-const Card = ({ title, spinButtonId, image, price }) => {
+const Card = ({ title, spinButtonId, image, price, onClick }) => {
   return (
     <div className="card">
       <h4>{title}</h4>
       <img src={image} alt="" />
       <p>{`$${price}`}</p>
       <SpinButton id={spinButtonId} />
-      <button>Add To Cart</button>
+      <button onClick={onClick}>Add To Cart</button>
     </div>
   );
 };
