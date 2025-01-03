@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import NavBar from "./NavBar";
 import Card from "./Card";
 import "../styles/Shop.css";
 
