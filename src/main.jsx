@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import Shop from "./components/Shop.jsx";
 import Home from "./components/Home.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/reset.css";
 import "./styles/index.css";
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "home",
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
+      },
+      {
+        index: true,
+        element: <Home />,
       },
     ],
   },
