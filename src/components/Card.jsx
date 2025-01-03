@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
 import "../styles/Card.css";
 
-const Card = ({ title = "testTitle", spinButtonId, image, price }) => {
+const Card = ({ title, spinButtonId, image, price }) => {
   return (
     <div className="card">
-      <h2>{title}</h2>
+      <h4>{title}</h4>
       <img src={image} alt="" />
-      <p>{price}</p>
+      <p>{`$${price}`}</p>
       <SpinButton id={spinButtonId} />
       <button>Add To Cart</button>
     </div>
@@ -16,7 +16,9 @@ const Card = ({ title = "testTitle", spinButtonId, image, price }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  spinId: PropTypes.string.isRequired,
+  spinButtonId: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
 };
 
 export default Card;

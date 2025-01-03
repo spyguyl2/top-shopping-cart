@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Card from "./Card";
+import "../styles/Shop.css";
 
 const Shop = () => {
   const [shopData, setShopData] = useState(null);
@@ -28,13 +29,18 @@ const Shop = () => {
   return (
     <>
       <NavBar />
-      <p>welcome to the shop</p>
-      <Card
-        title={shopData[0].title}
-        spinButtonId={shopData[0].id}
-        image={shopData[0].image}
-        price={shopData[0].price}
-      />
+      <div className="shopGrid">
+        {shopData.map((shopItem) => {
+          return (
+            <Card
+              title={shopItem.title}
+              spinButtonId={shopItem.id}
+              image={shopItem.image}
+              price={shopItem.price}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
