@@ -16,9 +16,9 @@ const Card = ({ title, spinButtonId, image, price }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  spinButtonId: PropTypes.string.isRequired,
+  spinButtonId: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default Card;

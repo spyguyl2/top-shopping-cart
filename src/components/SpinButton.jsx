@@ -41,7 +41,7 @@ const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
           onChange={handleInputChange}
         />
         <button aria-label="plus" onClick={handleIncreaseQuantity}>
-          <Plus name="plus" />
+          <Plus />
         </button>
       </div>
     </div>
@@ -49,7 +49,7 @@ const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
 };
 
 SpinButton.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   text: PropTypes.string,
   min: PropTypes.number,
   max: PropTypes.number,
