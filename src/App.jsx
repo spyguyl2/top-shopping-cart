@@ -3,11 +3,17 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [cartCount, setCartCount] = useState(0);
-  const [cartCost, setCartCost] = useState(0);
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (shopItem) => {
+    const newItem = { title: shopItem.title, price: shopItem.price };
+    const newCart = cart.push(newItem);
+    setCart(newCart);
+  };
+
   return (
     <>
-      <NavBar />
+      <NavBar cart={cart} />
       <Outlet />
     </>
   );

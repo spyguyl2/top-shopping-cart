@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import "../styles/navBar.css";
 
-const NavBar = () => {
+const NavBar = ({ cart }) => {
+  console.log(cart);
   return (
     <div className="navBar">
       <h1>test</h1>
@@ -16,7 +17,7 @@ const NavBar = () => {
       </ul>
       <div className="cartButton">
         <ShoppingCart size={48}></ShoppingCart>
-        <p>Checkout {/*`(${cart})`*/}</p>
+        <p>Checkout: {`(${cart.length})`}</p>
       </div>
     </div>
   );
