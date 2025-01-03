@@ -1,11 +1,12 @@
+import { Outlet } from "react-router-dom";
 import Home from "./components/Home";
-import SpinButton from "./components/SpinButton";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <SpinButton id="test" />
+      <NavBar />
+      <Outlet />
     </>
   );
 }

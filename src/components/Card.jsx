@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
 import "../styles/Card.css";
-import { ShoppingCart } from "lucide-react";
 
-const Card = ({ title = "testTitle", spinId }) => {
+const Card = ({ title, spinButtonId, image, price }) => {
   return (
     <div className="card">
-      <h2>{title}</h2>
-      <ShoppingCart size={164} />
-      <SpinButton id={spinId} />
+      <h4>{title}</h4>
+      <img src={image} alt="" />
+      <p>{`$${price}`}</p>
+      <SpinButton id={spinButtonId} />
       <button>Add To Cart</button>
     </div>
   );
@@ -16,7 +16,9 @@ const Card = ({ title = "testTitle", spinId }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  spinId: PropTypes.string.isRequired,
+  spinButtonId: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
 };
 
 export default Card;
