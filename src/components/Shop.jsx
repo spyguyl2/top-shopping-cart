@@ -28,7 +28,6 @@ const Shop = () => {
 
   return (
     <>
-      <NavBar />
       <div className="shopGrid">
         {shopData.map((shopItem) => {
           return (

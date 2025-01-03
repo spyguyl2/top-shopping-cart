@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "../styles/navBar.css";
 import { ShoppingCart } from "lucide-react";
+import "../styles/navBar.css";
 
 const NavBar = () => {
   return (
@@ -8,7 +8,7 @@ const NavBar = () => {
       <h1>test</h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="home">Home</Link>
         </li>
         <li>
           <Link to="shop">Shop</Link>
@@ -16,7 +16,7 @@ const NavBar = () => {
       </ul>
       <div className="cartButton">
         <ShoppingCart size={48}></ShoppingCart>
-        <p>Checkout</p>
+        <p>Checkout {/*`(${cart})`*/}</p>
       </div>
     </div>
   );
