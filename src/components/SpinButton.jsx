@@ -1,28 +1,18 @@
 import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react";
 import "../styles/spinButton.css";
-import { useState } from "react";
 
-const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
-  const [quantity, setQuantity] = useState(0);
-
-  const handleIncreaseQuantity = () => {
-    quantity >= max
-      ? setQuantity(max)
-      : setQuantity((prevQuantity) => parseInt(prevQuantity + 1));
-  };
-  const handleDecreaseQuantity = () => {
-    quantity <= min
-      ? setQuantity(min)
-      : setQuantity((prevQuantity) => parseInt(prevQuantity - 1));
-  };
-
-  const handleInputChange = (event) => {
-    let newValue = parseInt(event.target.value);
-    if (newValue <= min) newValue = min;
-    if (newValue >= max) newValue = max;
-    setQuantity(newValue);
-  };
+const SpinButton = ({
+  id,
+  text = "Quantity:",
+  min,
+  max,
+  handleIncreaseQuantity,
+  handleDecreaseQuantity,
+  handleInputChange,
+  quantity,
+}) => {
+  const handleFocus = () => event.target.select();
 
   return (
     <div className="spinContainerOuter">
@@ -38,6 +28,7 @@ const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
           min={min}
           max={max}
           value={quantity}
+          onFocus={handleFocus}
           onChange={handleInputChange}
         />
         <button aria-label="plus" onClick={handleIncreaseQuantity}>
