@@ -3,8 +3,14 @@ import { Plus, Minus } from "lucide-react";
 import "../styles/spinButton.css";
 import { useState } from "react";
 
-const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
-  const [quantity, setQuantity] = useState(0);
+const SpinButton = ({
+  id,
+  text = "Quantity:",
+  min = 0,
+  max = 99,
+  quantityState,
+}) => {
+  const [quantity, setQuantity] = quantityState;
 
   const handleIncreaseQuantity = () => {
     quantity >= max
@@ -53,6 +59,7 @@ SpinButton.propTypes = {
   text: PropTypes.string,
   min: PropTypes.number,
   max: PropTypes.number,
+  quantityState: PropTypes.array.isRequired,
 };
 
 export default SpinButton;
