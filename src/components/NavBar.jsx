@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import "../styles/navBar.css";
+import PropTypes from "prop-types";
 
 const NavBar = ({ cart }) => {
-  console.log(cart);
   return (
     <div className="navBar">
       <h1>test</h1>
@@ -21,6 +21,10 @@ const NavBar = ({ cart }) => {
       </div>
     </div>
   );
+};
+
+NavBar.propTypes = {
+  cart: PropTypes.array.isRequired,
 };
 
 export default NavBar;
