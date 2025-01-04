@@ -4,14 +4,12 @@ import SpinButton from "./SpinButton";
 import "../styles/Card.css";
 
 const Card = ({ title, spinButtonId, image, price, onClick }) => {
-  const [quantity, setQuantity] = useState(0);
-
   return (
     <div className="card">
       <h4>{title}</h4>
       <img src={image} alt="" />
       <p>{`$${price}`}</p>
-      <SpinButton id={spinButtonId} quantityState={[quantity, setQuantity]} />
+      <SpinButton id={spinButtonId} />
       <button onClick={onClick}>Add To Cart</button>
     </div>
   );
