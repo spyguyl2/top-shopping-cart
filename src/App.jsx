@@ -6,6 +6,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (shopItem) => {
+    if (shopItem.quantity <= 0) return;
     const newItem = {
       title: shopItem.title,
       price: shopItem.price,
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       <NavBar cart={cart} />
-      <Outlet />
+      <Outlet context={handleAddToCart} />
     </>
   );
 }

@@ -2,17 +2,23 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
 import "../styles/Card.css";
+import { useOutletContext } from "react-router-dom";
 
-const Card = ({
-  title,
-  spinButtonId,
-  image,
-  price,
-  onClick,
-  min = 0,
-  max = 99,
-}) => {
+const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   const [quantity, setQuantity] = useState(0);
+
+  const handleAddToCart = useOutletContext();
+
+  let shopItem = {
+    title: title,
+    price: price,
+    quantity: quantity,
+  };
+
+  const onClickAddToCart = () => {
+    shopItem.quantity = quantity;
+    handleAddToCart(shopItem);
+  };
 
   const handleIncreaseQuantity = () => {
     quantity >= max
@@ -47,7 +53,7 @@ const Card = ({
         handleInputChange={handleInputChange}
         quantity={quantity}
       />
-      <button onClick={onClick}>Add To Cart</button>
+      <button onClick={onClickAddToCart}>Add To Cart</button>
     </div>
   );
 };
