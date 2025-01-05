@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react";
 import "../styles/spinButton.css";
 
-
 const SpinButton = ({
   id,
   text = "Quantity:",
@@ -13,7 +12,7 @@ const SpinButton = ({
   handleInputChange,
   quantity,
 }) => {
-  const handleFocus = () => event.target.select();
+  const handleFocus = (event) => event.target.select();
 
   return (
     <div className="spinContainerOuter">
