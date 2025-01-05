@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react";
 import "../styles/spinButton.css";
 
+
 const SpinButton = ({
   id,
   text = "Quantity:",
