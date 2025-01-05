@@ -1,30 +1,19 @@
 import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react";
 import "../styles/spinButton.css";
-import { useState } from "react";
 
-const SpinButton = ({ id, text = "Quantity:", min = 0, max = 99 }) => {
-  const [quantity, setQuantity] = useState(0);
 
+const SpinButton = ({
+  id,
+  text = "Quantity:",
+  min,
+  max,
+  handleIncreaseQuantity,
+  handleDecreaseQuantity,
+  handleInputChange,
+  quantity,
+}) => {
   const handleFocus = () => event.target.select();
-
-  const handleIncreaseQuantity = () => {
-    quantity >= max
-      ? setQuantity(max)
-      : setQuantity((prevQuantity) => parseInt(prevQuantity) + 1);
-  };
-  const handleDecreaseQuantity = () => {
-    quantity <= min
-      ? setQuantity(min)
-      : setQuantity((prevQuantity) => parseInt(prevQuantity) - 1);
-  };
-
-  const handleInputChange = (event) => {
-    let newValue = event.target.value;
-    if (newValue <= min) newValue = min;
-    if (newValue >= max) newValue = max;
-    setQuantity(newValue);
-  };
 
   return (
     <div className="spinContainerOuter">
@@ -56,6 +45,10 @@ SpinButton.propTypes = {
   text: PropTypes.string,
   min: PropTypes.number,
   max: PropTypes.number,
+  quantity: PropTypes.number,
+  handleIncreaseQuantity: PropTypes.func,
+  handleDecreaseQuantity: PropTypes.func,
+  handleInputChange: PropTypes.func,
 };
 
 export default SpinButton;

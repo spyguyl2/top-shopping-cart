@@ -1,10 +1,97 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SpinButton component > Renders component 1`] = `
+exports[`Card component > Renders component 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div
+        class="card"
+      >
+        <h4 />
+        <img
+          alt=""
+        />
+        <p>
+          $undefined
+        </p>
+        <div
+          class="spinContainerOuter"
+        >
+          <label>
+            Quantity:
+          </label>
+          <div
+            class="spinContainerInner"
+          >
+            <button
+              aria-label="minus"
+            >
+              <svg
+                class="lucide lucide-minus"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+              </svg>
+            </button>
+            <input
+              max="99"
+              min="0"
+              type="number"
+              value="0"
+            />
+            <button
+              aria-label="plus"
+            >
+              <svg
+                class="lucide lucide-plus"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button>
+          Add To Cart
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="card"
+    >
+      <h4 />
+      <img
+        alt=""
+      />
+      <p>
+        $undefined
+      </p>
       <div
         class="spinContainerOuter"
       >
@@ -35,8 +122,10 @@ exports[`SpinButton component > Renders component 1`] = `
             </svg>
           </button>
           <input
+            max="99"
+            min="0"
             type="number"
-            value=""
+            value="0"
           />
           <button
             aria-label="plus"
@@ -63,66 +152,9 @@ exports[`SpinButton component > Renders component 1`] = `
           </button>
         </div>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="spinContainerOuter"
-    >
-      <label>
-        Quantity:
-      </label>
-      <div
-        class="spinContainerInner"
-      >
-        <button
-          aria-label="minus"
-        >
-          <svg
-            class="lucide lucide-minus"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 12h14"
-            />
-          </svg>
-        </button>
-        <input
-          type="number"
-          value=""
-        />
-        <button
-          aria-label="plus"
-        >
-          <svg
-            class="lucide lucide-plus"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 12h14"
-            />
-            <path
-              d="M12 5v14"
-            />
-          </svg>
-        </button>
-      </div>
+      <button>
+        Add To Cart
+      </button>
     </div>
   </div>,
   "debug": [Function],
