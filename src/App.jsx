@@ -6,8 +6,12 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (shopItem) => {
-    const newItem = { title: shopItem.title, price: shopItem.price };
-    const newCart = cart.push(newItem);
+    const newItem = {
+      title: shopItem.title,
+      price: shopItem.price,
+      quantity: shopItem.quantity,
+    };
+    const newCart = [...cart, newItem];
     setCart(newCart);
   };
 
