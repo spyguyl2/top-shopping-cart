@@ -58,6 +58,8 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   onClick: PropTypes.func,
+  min: PropTypes.number,
+  max: PropTypes.number,
 };
 
 export default Card;

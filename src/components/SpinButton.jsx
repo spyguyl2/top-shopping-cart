@@ -44,6 +44,10 @@ SpinButton.propTypes = {
   text: PropTypes.string,
   min: PropTypes.number,
   max: PropTypes.number,
+  quantity: PropTypes.number,
+  handleIncreaseQuantity: PropTypes.func,
+  handleDecreaseQuantity: PropTypes.func,
+  handleInputChange: PropTypes.func,
 };
 
 export default SpinButton;
