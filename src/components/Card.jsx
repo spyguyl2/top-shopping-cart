@@ -1,8 +1,22 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
-import "../styles/Card.css";
+import styled from "styled-components";
 import { useOutletContext } from "react-router-dom";
+
+const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  width: 12rem;
+  border: 1px solid purple;
+  border-radius: 5px;
+  background-color: rgb(180, 120, 237);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
 const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   const [quantity, setQuantity] = useState(0);
@@ -40,7 +54,7 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   };
 
   return (
-    <div className="card">
+    <CardWrapper>
       <h4>{title}</h4>
       <img src={image} alt="" />
       <p>{`$${price}`}</p>
@@ -54,7 +68,7 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
         quantity={quantity}
       />
       <button onClick={onClickAddToCart}>Add To Cart</button>
-    </div>
+    </CardWrapper>
   );
 };
 

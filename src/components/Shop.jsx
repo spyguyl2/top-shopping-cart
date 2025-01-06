@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
-import "../styles/Shop.css";
+import styled from "styled-components";
+
+const ShopGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 99vw;
+  place-content: center;
+`;
 
 const Shop = () => {
   const [shopData, setShopData] = useState(null);
@@ -27,7 +35,7 @@ const Shop = () => {
 
   return (
     <>
-      <div className="shopGrid">
+      <ShopGrid>
         {shopData.map((shopItem) => {
           return (
             <Card
@@ -39,7 +47,7 @@ const Shop = () => {
             />
           );
         })}
-      </div>
+      </ShopGrid>
     </>
   );
 };

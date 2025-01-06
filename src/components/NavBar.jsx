@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
-import "../styles/navBar.css";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const NavBarWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const CartButton = styled.div`
+  padding: 1rem;
+`;
 
 const NavBar = ({ cart }) => {
   return (
-    <div className="navBar">
+    <NavBarWrapper>
       <h1>test</h1>
       <ul>
         <li>
@@ -15,11 +25,11 @@ const NavBar = ({ cart }) => {
           <Link to="shop">Shop</Link>
         </li>
       </ul>
-      <div className="cartButton">
+      <CartButton>
         <ShoppingCart size={48}></ShoppingCart>
         <p>Checkout: {`(${cart.length})`}</p>
-      </div>
-    </div>
+      </CartButton>
+    </NavBarWrapper>
   );
 };
 

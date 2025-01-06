@@ -1,7 +1,0 @@
-.shopGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 99vw;
-  place-content: center;
-}
