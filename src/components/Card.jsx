@@ -4,20 +4,6 @@ import SpinButton from "./SpinButton";
 import styled from "styled-components";
 import { useOutletContext } from "react-router-dom";
 
-const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.8rem;
-  width: 12rem;
-  border: 1px solid purple;
-  border-radius: 5px;
-  background-color: rgb(180, 120, 237);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
 const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   const [quantity, setQuantity] = useState(0);
 
@@ -71,6 +57,20 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
     </CardWrapper>
   );
 };
+
+const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  width: 12rem;
+  border: 1px solid purple;
+  border-radius: 5px;
+  background-color: rgb(180, 120, 237);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,

@@ -2,14 +2,6 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import styled from "styled-components";
 
-const ShopGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 99vw;
-  place-content: center;
-`;
-
 const Shop = () => {
   const [shopData, setShopData] = useState(null);
   const [error, setError] = useState(false);
@@ -51,5 +43,13 @@ const Shop = () => {
     </>
   );
 };
+
+const ShopGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 99vw;
+  place-content: center;
+`;
 
 export default Shop;

@@ -3,16 +3,6 @@ import { ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const NavBarWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-const CartButton = styled.div`
-  padding: 1rem;
-`;
-
 const NavBar = ({ cart }) => {
   return (
     <NavBarWrapper>
@@ -32,6 +22,16 @@ const NavBar = ({ cart }) => {
     </NavBarWrapper>
   );
 };
+
+const NavBarWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const CartButton = styled.div`
+  padding: 1rem;
+`;
 
 NavBar.propTypes = {
   cart: PropTypes.array.isRequired,

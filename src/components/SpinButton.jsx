@@ -2,6 +2,43 @@ import PropTypes from "prop-types";
 import { Plus, Minus } from "lucide-react";
 import styled from "styled-components";
 
+const SpinButton = ({
+  id,
+  text = "Quantity:",
+  min,
+  max,
+  handleIncreaseQuantity,
+  handleDecreaseQuantity,
+  handleInputChange,
+  quantity,
+}) => {
+  const handleFocus = (event) => event.target.select();
+
+  return (
+    <SpinContainerOuter>
+      <label htmlFor={id}>{text}</label>
+      <SpinContainerInner>
+        <StyleButton aria-label="minus" onClick={handleDecreaseQuantity}>
+          <Minus />
+        </StyleButton>
+        <StyleSpinInput
+          type="number"
+          name={id}
+          id={id}
+          min={min}
+          max={max}
+          value={quantity}
+          onFocus={handleFocus}
+          onChange={handleInputChange}
+        />
+        <StyleButton aria-label="plus" onClick={handleIncreaseQuantity}>
+          <Plus />
+        </StyleButton>
+      </SpinContainerInner>
+    </SpinContainerOuter>
+  );
+};
+
 const SpinContainerOuter = styled.div`
   display: flex
   flex-direction: column;
@@ -43,43 +80,6 @@ const StyleSpinInput = styled.input`
     appearance: textfield;
   }
 `;
-
-const SpinButton = ({
-  id,
-  text = "Quantity:",
-  min,
-  max,
-  handleIncreaseQuantity,
-  handleDecreaseQuantity,
-  handleInputChange,
-  quantity,
-}) => {
-  const handleFocus = (event) => event.target.select();
-
-  return (
-    <SpinContainerOuter>
-      <label htmlFor={id}>{text}</label>
-      <SpinContainerInner>
-        <StyleButton aria-label="minus" onClick={handleDecreaseQuantity}>
-          <Minus />
-        </StyleButton>
-        <StyleSpinInput
-          type="number"
-          name={id}
-          id={id}
-          min={min}
-          max={max}
-          value={quantity}
-          onFocus={handleFocus}
-          onChange={handleInputChange}
-        />
-        <StyleButton aria-label="plus" onClick={handleIncreaseQuantity}>
-          <Plus />
-        </StyleButton>
-      </SpinContainerInner>
-    </SpinContainerOuter>
-  );
-};
 
 SpinButton.propTypes = {
   id: PropTypes.number.isRequired,
