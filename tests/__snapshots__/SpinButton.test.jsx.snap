@@ -6,16 +6,17 @@ exports[`SpinButton component > Renders component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="spinContainerOuter"
+        class="sc-KXCwU fCBWIZ"
       >
         <label>
           Quantity:
         </label>
         <div
-          class="spinContainerInner"
+          class="sc-gyycJP hJHhVz"
         >
           <button
             aria-label="minus"
+            class="sc-eaUbBy bfyhJY"
           >
             <svg
               class="lucide lucide-minus"
@@ -35,11 +36,12 @@ exports[`SpinButton component > Renders component 1`] = `
             </svg>
           </button>
           <input
+            class="sc-gaZyOd Gexjg"
             type="number"
-            value=""
           />
           <button
             aria-label="plus"
+            class="sc-eaUbBy bfyhJY"
           >
             <svg
               class="lucide lucide-plus"
@@ -67,16 +69,17 @@ exports[`SpinButton component > Renders component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="spinContainerOuter"
+      class="sc-KXCwU fCBWIZ"
     >
       <label>
         Quantity:
       </label>
       <div
-        class="spinContainerInner"
+        class="sc-gyycJP hJHhVz"
       >
         <button
           aria-label="minus"
+          class="sc-eaUbBy bfyhJY"
         >
           <svg
             class="lucide lucide-minus"
@@ -96,11 +99,12 @@ exports[`SpinButton component > Renders component 1`] = `
           </svg>
         </button>
         <input
+          class="sc-gaZyOd Gexjg"
           type="number"
-          value=""
         />
         <button
           aria-label="plus"
+          class="sc-eaUbBy bfyhJY"
         >
           <svg
             class="lucide lucide-plus"

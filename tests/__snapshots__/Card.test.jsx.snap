@@ -6,7 +6,7 @@ exports[`Card component > Renders component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="card"
+        class="sc-dDvxFM PHluN"
       >
         <h4 />
         <img
@@ -16,16 +16,17 @@ exports[`Card component > Renders component 1`] = `
           $undefined
         </p>
         <div
-          class="spinContainerOuter"
+          class="sc-KXCwU fCBWIZ"
         >
           <label>
             Quantity:
           </label>
           <div
-            class="spinContainerInner"
+            class="sc-gyycJP hJHhVz"
           >
             <button
               aria-label="minus"
+              class="sc-eaUbBy bfyhJY"
             >
               <svg
                 class="lucide lucide-minus"
@@ -45,6 +46,7 @@ exports[`Card component > Renders component 1`] = `
               </svg>
             </button>
             <input
+              class="sc-gaZyOd Gexjg"
               max="99"
               min="0"
               type="number"
@@ -52,6 +54,7 @@ exports[`Card component > Renders component 1`] = `
             />
             <button
               aria-label="plus"
+              class="sc-eaUbBy bfyhJY"
             >
               <svg
                 class="lucide lucide-plus"
@@ -83,7 +86,7 @@ exports[`Card component > Renders component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="card"
+      class="sc-dDvxFM PHluN"
     >
       <h4 />
       <img
@@ -93,16 +96,17 @@ exports[`Card component > Renders component 1`] = `
         $undefined
       </p>
       <div
-        class="spinContainerOuter"
+        class="sc-KXCwU fCBWIZ"
       >
         <label>
           Quantity:
         </label>
         <div
-          class="spinContainerInner"
+          class="sc-gyycJP hJHhVz"
         >
           <button
             aria-label="minus"
+            class="sc-eaUbBy bfyhJY"
           >
             <svg
               class="lucide lucide-minus"
@@ -122,6 +126,7 @@ exports[`Card component > Renders component 1`] = `
             </svg>
           </button>
           <input
+            class="sc-gaZyOd Gexjg"
             max="99"
             min="0"
             type="number"
@@ -129,6 +134,7 @@ exports[`Card component > Renders component 1`] = `
           />
           <button
             aria-label="plus"
+            class="sc-eaUbBy bfyhJY"
           >
             <svg
               class="lucide lucide-plus"
