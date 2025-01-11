@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 
@@ -24,9 +25,23 @@ function App() {
     <>
       <NavBar cart={cart} openCart={handleToggleSideBar} />
       <Outlet context={{ handleToggleSideBar }} />
-      <SideBar stateToggleOpen={toggleSideBar}></SideBar>
+      {toggleSideBar && <ClickableBackground onClick={handleToggleSideBar} />}
+      <SideBar
+        stateToggleOpen={toggleSideBar}
+        onClick={handleToggleSideBar}
+      ></SideBar>
     </>
   );
 }
 
 export default App;
+
+const ClickableBackground = styled.div`
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
