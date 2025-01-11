@@ -27,7 +27,7 @@ export default SideBar;
 const SideBarWrapper = styled.div`
   width: 25%;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
