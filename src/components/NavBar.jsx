@@ -31,10 +31,15 @@ const NavBarWrapper = styled.div`
 
 const CartButton = styled.div`
   padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    color: aliceblue;
+  }
 `;
 
 NavBar.propTypes = {
   cart: PropTypes.array.isRequired,
+  openCart: PropTypes.func.isRequired,
 };
 
 export default NavBar;
