@@ -22,8 +22,8 @@ const Shop = () => {
       .catch((error) => setError(error));
   }, []);
 
-  if (loading) return <p>Loading ...</p>;
   if (error) return <p>A network error has occured.</p>;
+  if (loading) return <p>Loading ...</p>;
 
   return (
     <>
