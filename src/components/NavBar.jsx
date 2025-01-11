@@ -3,7 +3,7 @@ import { ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const NavBar = ({ cart }) => {
+const NavBar = ({ cart, openCart }) => {
   return (
     <NavBarWrapper>
       <h1>test</h1>
@@ -15,7 +15,7 @@ const NavBar = ({ cart }) => {
           <Link to="shop">Shop</Link>
         </li>
       </ul>
-      <CartButton>
+      <CartButton onClick={openCart}>
         <ShoppingCart size={48}></ShoppingCart>
         <p>Checkout: {`(${cart.length})`}</p>
       </CartButton>

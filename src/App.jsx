@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [toggleSideBar, setToggleSideBar] = useState(false);
+
+  const handleToggleSideBar = () => setToggleSideBar(!toggleSideBar);
 
   const handleAddToCart = (shopItem) => {
     if (shopItem.quantity <= 0) return;
@@ -18,8 +22,9 @@ function App() {
 
   return (
     <>
-      <NavBar cart={cart} />
-      <Outlet context={handleAddToCart} />
+      <NavBar cart={cart} openCart={handleToggleSideBar} />
+      <Outlet context={{ handleToggleSideBar }} />
+      <SideBar stateToggleOpen={toggleSideBar}></SideBar>
     </>
   );
 }
