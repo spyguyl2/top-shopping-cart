@@ -38,6 +38,7 @@ function App() {
 export default App;
 
 const Container = styled.div`
+  background-color: rgb(98, 131, 149);
   display: flex;
   flex-direction: column;
   height: 100vh;

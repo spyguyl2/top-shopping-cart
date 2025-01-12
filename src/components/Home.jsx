@@ -17,4 +17,5 @@ const HomeContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: rgb(223, 213, 165);
 `;

@@ -6,7 +6,6 @@ import Home from "./components/Home.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/reset.css";
-import "./styles/index.css";
 
 const router = createBrowserRouter([
   {
