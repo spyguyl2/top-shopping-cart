@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { ClickableBackground } from "./styles/styleLibrary";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
+import styled from "styled-components";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -22,7 +23,7 @@ function App() {
   };
 
   return (
-    <>
+    <Container>
       <NavBar cart={cart} openCart={handleToggleSideBar} />
       <Outlet context={{ handleToggleSideBar }} />
       {toggleSideBar && <ClickableBackground onClick={handleToggleSideBar} />}
@@ -30,8 +31,14 @@ function App() {
         stateToggleOpen={toggleSideBar}
         onClick={handleToggleSideBar}
       ></SideBar>
-    </>
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
