@@ -70,6 +70,10 @@ const CardWrapper = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  img {
+    max-height: 10rem;
+  }
 `;
 
 Card.propTypes = {
