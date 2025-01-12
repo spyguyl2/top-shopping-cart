@@ -1,29 +1,14 @@
-import { useEffect, useState } from "react";
+import useApiData from "../custom_hooks/useApiData";
 import Card from "./Card";
 import styled from "styled-components";
 
 const Shop = () => {
-  const [shopData, setShopData] = useState(null);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const { shopData, loading, error } = useApiData(
+    "https://fakestoreapi.com/products"
+  );
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products", { mode: "cors" })
-      .then((response) => {
-        if (response.status >= 400) {
-          throw new Error("server error");
-        }
-        return response.json();
-      })
-      .then((response) => {
-        setShopData(response);
-        setLoading(false);
-      })
-      .catch((error) => setError(error));
-  }, []);
-
-  if (error) return <p>A network error has occured.</p>;
   if (loading) return <p>Loading ...</p>;
+  if (error) return <p>A network error has occured.</p>;
 
   return (
     <>
