@@ -1,14 +1,15 @@
 import useApiData from "../custom_hooks/useApiData";
 import Card from "./Card";
 import styled from "styled-components";
+import { Heading } from "./NavBar";
 
 const Shop = () => {
   const { shopData, loading, error } = useApiData(
-    "https://fakestoreapi.com/products"
+    "https://api.escuelajs.co/api/v1/products"
   );
 
-  if (loading) return <p>Loading ...</p>;
-  if (error) return <p>A network error has occured.</p>;
+  if (error) return <Heading as={"p"}>A network error has occured.</Heading>;
+  if (loading) return <Heading as={"p"}>Loading ...</Heading>;
 
   return (
     <>
@@ -18,7 +19,7 @@ const Shop = () => {
             <Card
               title={shopItem.title}
               spinButtonId={shopItem.id}
-              image={shopItem.image}
+              image={shopItem.images[0]}
               price={shopItem.price}
               key={shopItem.id}
             />
