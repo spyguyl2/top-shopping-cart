@@ -31,7 +31,7 @@ const SideBarWrapper = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: black;
+  background-color: ${(props) => props.theme.secondary};
   overflow-x: hidden;
   padding-top: 1rem;
 
