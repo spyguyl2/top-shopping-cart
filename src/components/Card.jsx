@@ -18,7 +18,7 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   };
 
   const onClickAddToCart = () => {
-    shopItem.quantity = quantity;
+    shopItem.quantity = parseInt(quantity);
     handleAddToCart(shopItem);
   };
 
@@ -53,7 +53,7 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
         handleIncreaseQuantity={handleIncreaseQuantity}
         handleDecreaseQuantity={handleDecreaseQuantity}
         handleInputChange={handleInputChange}
-        quantity={quantity}
+        quantity={parseInt(quantity)}
       />
       <StyleButton onClick={onClickAddToCart}>Add To Cart</StyleButton>
     </CardWrapper>
