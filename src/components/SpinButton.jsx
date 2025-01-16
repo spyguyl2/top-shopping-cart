@@ -16,7 +16,7 @@ const SpinButton = ({
 
   return (
     <SpinContainerOuter>
-      <label htmlFor={id}>{text}</label>
+      <StyledLabel htmlFor={id}>{text}</StyledLabel>
       <SpinContainerInner>
         <StyleButton aria-label="minus" onClick={handleDecreaseQuantity}>
           <Minus />
@@ -39,11 +39,15 @@ const SpinButton = ({
   );
 };
 
+const StyledLabel = styled.label`
+  color: ${(props) => props.theme.secondary};
+`;
+
 const SpinContainerOuter = styled.div`
-  display: flex
+  display: flex;
   flex-direction: column;
   align-items: center;
-  `;
+`;
 
 const SpinContainerInner = styled.div`
   display: flex;
@@ -51,15 +55,17 @@ const SpinContainerInner = styled.div`
   margin-bottom: 0.2rem;
 `;
 
-const StyleButton = styled.button`
+export const StyleButton = styled.button`
   border-radius: 20px;
+  color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.secondary};
 
   &:hover {
     cursor: pointer;
   }
 
   &:active {
-    background-color: rgb(62, 166, 195);
+    background-color: ${(props) => props.theme.tertiary};
     transform: translateY(4px);
   }
 `;
