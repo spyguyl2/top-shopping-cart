@@ -2,12 +2,14 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import SpinButton from "./SpinButton";
 import styled from "styled-components";
+import { StyleButton } from "./SpinButton";
+import { Heading } from "./NavBar";
 import { useOutletContext } from "react-router-dom";
 
 const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
   const [quantity, setQuantity] = useState(0);
 
-  const handleAddToCart = useOutletContext();
+  const { handleAddToCart } = useOutletContext();
 
   let shopItem = {
     title: title,
@@ -41,9 +43,9 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
 
   return (
     <CardWrapper>
-      <h4>{title}</h4>
+      <CardHeading as={"h4"}>{title}</CardHeading>
       <img src={image} alt="" />
-      <p>{`$${price}`}</p>
+      <CardHeading as={"p"}>{`$${price}`}</CardHeading>
       <SpinButton
         id={spinButtonId}
         min={min}
@@ -53,10 +55,14 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
         handleInputChange={handleInputChange}
         quantity={quantity}
       />
-      <button onClick={onClickAddToCart}>Add To Cart</button>
+      <StyleButton onClick={onClickAddToCart}>Add To Cart</StyleButton>
     </CardWrapper>
   );
 };
+
+const CardHeading = styled(Heading)`
+  color: ${(props) => props.theme.secondary};
+`;
 
 const CardWrapper = styled.div`
   display: flex;
@@ -66,7 +72,7 @@ const CardWrapper = styled.div`
   width: 12rem;
   border: 1px solid purple;
   border-radius: 5px;
-  background-color: rgb(180, 120, 237);
+  background-color: ${(props) => props.theme.primary};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
