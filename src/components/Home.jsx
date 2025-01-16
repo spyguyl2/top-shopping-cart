@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Heading } from "./NavBar";
 
 const Home = () => {
   return (
     <HomeContainer>
-      <h2>This is the home page!</h2>
-      <p>You can navigate from here. Yay!</p>
+      <Heading as={"h2"}>This is the home page!</Heading>
+      <Heading as={"p"}>You can navigate from here. Yay!</Heading>
     </HomeContainer>
   );
 };
