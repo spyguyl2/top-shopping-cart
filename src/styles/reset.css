@@ -1,3 +1,9 @@
+ul,
+ol,
+li {
+  list-style: none;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
