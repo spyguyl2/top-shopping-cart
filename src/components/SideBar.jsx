@@ -25,6 +25,8 @@ const SideBar = ({ stateToggleOpen, children }) => {
 export default SideBar;
 
 const SideBarWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 25%;
   height: 100vh;
   z-index: 2;
@@ -33,7 +35,9 @@ const SideBarWrapper = styled.div`
   right: 0;
   background-color: ${(props) => props.theme.secondary};
   overflow-x: hidden;
-  padding-top: 1rem;
+  gap: 0.5rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
 
   &.my-node-enter {
     transform: translateX(100%);
