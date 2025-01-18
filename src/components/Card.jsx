@@ -15,6 +15,8 @@ const Card = ({ title, spinButtonId, image, price, min = 0, max = 99 }) => {
     title: title,
     price: price,
     quantity: quantity,
+    id: spinButtonId,
+    src: image,
   };
 
   const onClickAddToCart = () => {
