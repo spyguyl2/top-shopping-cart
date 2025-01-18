@@ -39,6 +39,7 @@ const NavBarWrapper = styled.div`
 const CartNumber = styled.h2`
   position: absolute;
   color: ${(props) => props.theme.background};
+  cursor: pointer;
 `;
 
 const CartCircle = styled.div`
